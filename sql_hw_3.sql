@@ -29,13 +29,13 @@ FROM
 WHERE
     name NOT LIKE '% %';
 
-SELECT
+SELECT 
     name
-FROM
+FROM 
     tracks
-WHERE
-    LOWER(name) LIKE '%мой%'
-    OR LOWER(name) LIKE '%my%';
+WHERE 
+    LOWER(name) ~ '\mmy\M'
+    OR LOWER(name) ~ '\mмой\M';
 
 -- третье задание
 SELECT
